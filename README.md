@@ -1,86 +1,40 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación es una prueba técnica para Finanzauto, construida con React, TypeScript y Vite. Incluye funcionalidades como paginación, búsqueda, creación y eliminación de usuarios, y utiliza Tailwind CSS para el diseño.
 
-Currently, two official plugins are available:
+Se uso la API [DummyJson](https://dummyjson.com) debido a que la API proporcionada en la prueba técnica no estaba disponible para registro al momento de realizar la prueba técnica.
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- DummyJSON API
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+## Estructura del Proyecto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- `src/components`: Componentes reutilizables como vistas, tablas y modales.
+- `src/context`: Contexto global para manejar el estado de la aplicación.
+- `src/pages`: Páginas principales de la aplicación.
+- `src/model`: Modelos de datos de la aplicación.
+- `src/utils`: Constantes de la aplicación.
+- `src/api`: Funciones con las peticiones a la API.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Ejecución del Proyecto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clona el repositorio:
+   `git clone https://github.com/felipeacx/FA-prueba-tecnica-frontend`
+2. Navega al directorio del proyecto:
+   `cd FA-prueba-tecnica-frontend`
+3. Instala las dependencias:
+   `npm install`
+4. Inicia el servidor de desarrollo:
+   `npm run dev`
+5. Abre tu navegador y visita `http://localhost:5173` para ver la aplicación.
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x"
-import reactDom from "eslint-plugin-react-dom"
+## Construcción para Producción
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-## Tailwind CSS
-
-I fixed the Tailwind setup so utility classes are processed during development:
-
-- Added `postcss.config.js` with `tailwindcss` and `autoprefixer` plugins.
-- Updated `tailwind.config.js` content paths to include `./index.html` and `./src/**/*.{js,jsx,ts,tsx}`.
-- `src/index.css` already contains the Tailwind directives (`@tailwind base;`, `@tailwind components;`, `@tailwind utilities;`).
-
-How to verify locally (Windows cmd):
-
-```
-cd X:\\Dev\\ReactJS\\Finanzauto-prueba-tecnica-frontend
-npm install
-npm run dev
-
-# Open http://localhost:5173 or the alternate port Vite prints (e.g., 5174)
-```
-
-If Tailwind still doesn't apply, ensure `tailwindcss` is installed and node_modules are up to date. You can also clear the Vite cache by restarting the dev server.
+Para construir la aplicación para producción, ejecuta:
+`npm run build`
+El resultado se encontrará en el directorio `dist`.
