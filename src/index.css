@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #006C67;
+  --color-secondary: #0089FE;
+}
+
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  display: grid;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+th {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+
+td {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
