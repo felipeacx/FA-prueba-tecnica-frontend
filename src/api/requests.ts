@@ -1,3 +1,4 @@
+// Peticiones a la API
 import type { NewUserType } from "../model/globalModel"
 import { API_URL } from "../utils/const"
 

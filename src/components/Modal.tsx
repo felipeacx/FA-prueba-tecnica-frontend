@@ -1,3 +1,4 @@
+// Modal para mostrar contenido emergente
 import type { ModalProps } from "../model/globalModel"
 
 const Modal = ({ isOpen, onClose, children }: ModalProps) => {
