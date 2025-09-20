@@ -24,6 +24,7 @@ const Home = () => {
 
   return (
     <>
+      {/* Página principal componetizada */}
       <main className="flex flex-col items-center justify-start w-full sm:px-20 mt-4">
         <div className="flex gap-4 justify-end w-full">
           <input

@@ -1,3 +1,4 @@
+// Provider para manejar el estado de la aplicación
 import { useEffect, useState, type ReactNode } from "react"
 import { GlobalContext } from "./GlobalContext"
 import type { UserType } from "../model/globalModel"
