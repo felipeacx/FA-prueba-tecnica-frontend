@@ -1,3 +1,4 @@
+// Definiciones de tipos para la aplicación
 import type { ReactNode } from "react"
 
 export interface GlobalContextType {
